@@ -998,7 +998,7 @@
         </div>
     </section>
 
-    <!-- Free Lead Magnet Section - Email Capture -->
+    <!-- Free Lead Magnet Section - Gumroad -->
     <section id="free-prayers" class="lead-magnet">
         <div class="lead-magnet-container">
             <!-- Icon -->
@@ -1010,26 +1010,19 @@
             <!-- Subheadline -->
             <p class="lead-magnet-subtitle">
                 Join 1,000+ Christian men fighting the good fight.<br>
-                Enter your email for instant PDF download.
+                Instant PDF download. No credit card required.
             </p>
             
-            <!-- ConvertKit Form -->
-            <div class="formkit-wrapper">
-                <script async data-uid="54448a7d37" src="https://we-are-knights-templar.kit.com/54448a7d37/index.js"></script>
-            </div>
-            
-            <!-- Fallback: Direct link if form doesn't load -->
-            <div class="form-fallback" style="display: none; text-align: center; padding: 1rem;">
-                <a href="https://brothermark.gumroad.com/l/7daysofprayer" class="cta-button" target="_blank" style="background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); font-size: 1rem; padding: 1rem 2rem;">
-                    Get My Free Prayers
-                </a>
-            </div>
+            <!-- CTA Button to Gumroad -->
+            <a href="https://brothermark.gumroad.com/l/7daysofprayer" class="cta-button" target="_blank" style="background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); display: inline-block; margin-bottom: 1.5rem;">
+                Get My Free Prayers
+            </a>
             
             <!-- Trust badges -->
             <div class="trust-badges">
                 <span class="trust-badge">🔒 100% Free</span>
                 <span class="trust-badge">📥 Instant Download</span>
-                <span class="trust-badge">✓ No Spam</span>
+                <span class="trust-badge">✓ No Email Spam</span>
             </div>
             
             <!-- Preview -->
@@ -1346,24 +1339,6 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
-
-        // Check if ConvertKit form loaded, show fallback if not
-        function checkFormLoaded() {
-            setTimeout(function() {
-                const formWrapper = document.querySelector('.formkit-wrapper');
-                const form = document.querySelector('.formkit-form');
-                const fallback = document.querySelector('.form-fallback');
-                
-                // If no formkit form rendered, show fallback
-                if (formWrapper && !form && fallback) {
-                    fallback.style.display = 'block';
-                    formWrapper.style.display = 'none';
-                }
-            }, 3000); // Check after 3 seconds
-        }
-        
-        // Run form check when page loads
-        window.addEventListener('load', checkFormLoaded);
 
         // FAQ Toggle
         function toggleFaq(element) {
