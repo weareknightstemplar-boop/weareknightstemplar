@@ -626,6 +626,43 @@
             border-radius: 15px;
             padding: 2.5rem;
             margin-bottom: 1.5rem;
+            min-height: 150px;
+        }
+        
+        /* Ensure ConvertKit form displays properly */
+        .formkit-wrapper .formkit-form {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        .formkit-wrapper .formkit-container {
+            width: 100% !important;
+        }
+        
+        .formkit-wrapper input[type="email"] {
+            width: 100% !important;
+            padding: 1rem !important;
+            font-size: 1rem !important;
+            background: rgba(27, 27, 27, 0.9) !important;
+            border: 1px solid rgba(212, 175, 55, 0.4) !important;
+            border-radius: 8px !important;
+            color: var(--white) !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .formkit-wrapper button[type="submit"] {
+            width: 100% !important;
+            padding: 1rem 2rem !important;
+            font-family: 'Cinzel', serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            background: linear-gradient(135deg, var(--red-bright), var(--red)) !important;
+            color: var(--white) !important;
+            border: none !important;
+            border-radius: 8px !important;
+            cursor: pointer !important;
         }
 
         .formkit-form {
@@ -981,6 +1018,13 @@
                 <script async data-uid="54448a7d37" src="https://we-are-knights-templar.kit.com/54448a7d37/index.js"></script>
             </div>
             
+            <!-- Fallback: Direct link if form doesn't load -->
+            <div class="form-fallback" style="display: none; text-align: center; padding: 1rem;">
+                <a href="https://brothermark.gumroad.com/l/7daysofprayer" class="cta-button" target="_blank" style="background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); font-size: 1rem; padding: 1rem 2rem;">
+                    Get My Free Prayers
+                </a>
+            </div>
+            
             <!-- Trust badges -->
             <div class="trust-badges">
                 <span class="trust-badge">🔒 100% Free</span>
@@ -1302,6 +1346,24 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Check if ConvertKit form loaded, show fallback if not
+        function checkFormLoaded() {
+            setTimeout(function() {
+                const formWrapper = document.querySelector('.formkit-wrapper');
+                const form = document.querySelector('.formkit-form');
+                const fallback = document.querySelector('.form-fallback');
+                
+                // If no formkit form rendered, show fallback
+                if (formWrapper && !form && fallback) {
+                    fallback.style.display = 'block';
+                    formWrapper.style.display = 'none';
+                }
+            }, 3000); // Check after 3 seconds
+        }
+        
+        // Run form check when page loads
+        window.addEventListener('load', checkFormLoaded);
 
         // FAQ Toggle
         function toggleFaq(element) {
