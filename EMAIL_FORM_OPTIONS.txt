@@ -1,0 +1,88 @@
+
+================================================================================
+OPTION A: STYLED EMBEDDED FORM (Recommended)
+================================================================================
+
+This creates a beautiful email capture section that matches your landing page design.
+
+Replace your current email section in index.html with this:
+
+<!-- EMAIL CAPTURE SECTION -->
+<section id="signup" style="padding: 5rem 2rem; background: linear-gradient(180deg, #0a0a0a 0%, #1a0f0f 100%); text-align: center;">
+    <div style="max-width: 500px; margin: 0 auto;">
+
+        <!-- Icon -->
+        <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+
+        <!-- Headline -->
+        <h2 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #D4AF37; margin-bottom: 0.5rem;">
+            Get 7 Free Prayers for the Modern Warrior
+        </h2>
+
+        <!-- Subheadline -->
+        <p style="color: #aaa; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+            Join 1,000+ Christian men fighting the good fight.<br>
+            Instant PDF download.
+        </p>
+
+        <!-- ConvertKit Form Container -->
+        <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 10px; padding: 2rem;">
+            <script async data-uid="54448a7d37" src="https://we-are-knights-templar.kit.com/54448a7d37/index.js"></script>
+        </div>
+
+        <!-- Trust badges -->
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="color: #666; font-size: 0.8rem;">🔒 100% Free</span>
+            <span style="color: #666; font-size: 0.8rem;">📥 Instant Download</span>
+            <span style="color: #666; font-size: 0.8rem;">✓ No Spam</span>
+        </div>
+
+    </div>
+</section>
+
+================================================================================
+OPTION B: BUTTON TO CONVERTKIT PAGE
+================================================================================
+
+If you prefer a button that opens your ConvertKit landing page:
+
+1. First, create a landing page in ConvertKit:
+   - Go to ConvertKit → Grow → Landing Pages & Forms
+   - Click "+ Create New" → "Landing Page"
+   - Choose template
+   - Customize with your branding
+   - Get the URL (looks like: https://we-are-knights-templar.kit.com/xxxx)
+
+2. Then add this button to your landing page:
+
+<!-- CTA BUTTON SECTION -->
+<section id="signup" style="padding: 5rem 2rem; background: linear-gradient(180deg, #0a0a0a 0%, #1a0f0f 100%); text-align: center;">
+    <div style="max-width: 600px; margin: 0 auto;">
+
+        <h2 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #D4AF37; margin-bottom: 1rem;">
+            Start Your Warrior Journey Today
+        </h2>
+
+        <p style="color: #aaa; font-size: 1.1rem; margin-bottom: 2rem;">
+            Get the free "7 Prayers for the Modern Warrior" guide and join the brotherhood.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="YOUR-CONVERTKIT-LANDING-PAGE-URL" 
+           style="display: inline-block; background: linear-gradient(135deg, #DC143C, #8B0000); 
+                  color: #fff; padding: 1.25rem 3rem; font-size: 1.1rem; font-weight: 700; 
+                  text-transform: uppercase; letter-spacing: 2px; text-decoration: none;
+                  border-radius: 5px; box-shadow: 0 10px 30px rgba(220, 20, 60, 0.4);
+                  transition: all 0.3s ease;
+                  font-family: 'Inter', sans-serif;">
+            Get My Free Prayers →
+        </a>
+
+        <p style="color: #666; font-size: 0.8rem; margin-top: 1.5rem;">
+            🔒 100% Free · 📥 Instant PDF · No spam, ever
+        </p>
+
+    </div>
+</section>
+
+================================================================================
